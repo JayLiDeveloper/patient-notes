@@ -21,6 +21,7 @@ const PatientListPanel: React.FC<PatientListPanelProps> = ({
 
   useEffect(() => {
     setLoading(true);
+    // using setTimeout to simulate a real API call
     setTimeout(() => {
       setPatients(getPatients());
       setLoading(false);

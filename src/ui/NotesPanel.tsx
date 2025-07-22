@@ -19,6 +19,7 @@ const NotesPanel: React.FC<NotesPanelProps> = ({ selectedPatientId }) => {
 
   useEffect(() => {
     setLoading(true);
+    // using setTimeout to simulate a real API call
     setTimeout(() => {
       setNotes(getNotes());
       setLoading(false);
