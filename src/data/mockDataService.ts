@@ -22,8 +22,5 @@ export function getNotes(): Note[] {
   // }).finally(() => {
   //   console.log('Notes fetched');
   // });
-  return notesDataRaw.map((note) => ({
-    ...note,
-    created_at: note.creation_date,
-  }));
+  return notesDataRaw as Note[];
 } 
