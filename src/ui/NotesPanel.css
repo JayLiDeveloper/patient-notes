@@ -1,7 +1,8 @@
 .notes-panel-container {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  padding: 24px;
-  margin-right: 40px;
+  width: fit-content;
 }
 
 .notes-panel-filters {
@@ -21,7 +22,7 @@
 .notes-panel-list {
   margin-top: 16px;
   overflow-y: auto;
-  height: 75vh;
+  flex: 1;
   padding-right: 5px;
 }
 

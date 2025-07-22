@@ -55,6 +55,7 @@
 .patient-list-list {
   margin-top: 16px;
   overflow-y: auto;
+  flex: 1;
 }
 
 .patient-list-ul {
