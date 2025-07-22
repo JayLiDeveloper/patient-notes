@@ -1,0 +1,189 @@
+/* App.css - Modern Patient Notes Theme */
+
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: system-ui, sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  color: #1e293b;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0001;
+  margin: 24px 0;
+  padding: 24px;
+}
+
+.patient-list-panel {
+  border-right: 1px solid #e5e7eb;
+  background: #f1f5f9;
+}
+
+.patient-list-panel h2,
+.notes-panel h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+
+.patient-list-panel ul li {
+  transition: background 0.2s, border 0.2s;
+}
+
+.patient-list-panel ul li.selected {
+  background: #dbeafe;
+  border: 2px solid #2563eb;
+  color: #1e293b;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  background: #fff;
+  color: #1e293b;
+  outline: none;
+  transition: border 0.2s;
+  line-height: 1.5;
+}
+
+input,
+select,
+textarea {
+  line-height: 1.5;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border: 1.5px solid #2563eb;
+}
+
+button, .btn {
+  border-radius: 6px;
+  border: 1.5px solid #2563eb;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  margin-right: 0.2em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+
+button:disabled, .btn:disabled {
+  background: #e5e7eb;
+  color: #94a3b8;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+}
+
+.btn-secondary:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.btn-clear {
+  background: #fff;
+  color: #2563eb;
+  border: 1.5px solid #cbd5e1;
+}
+
+.btn-clear:hover {
+  background: #f3f4f6;
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.notes-panel ul li {
+  box-shadow: 0 1px 4px #0001;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.notes-panel ul li:hover {
+  box-shadow: 0 4px 16px #2563eb22;
+  border: 1.5px solid #2563eb;
+  background: #e0e7ff;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.no-results {
+  color: #64748b;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Modal styles */
+.note-modal {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 650px;
+  width: 95vw;
+  padding: 36px 32px 28px 32px;
+  box-shadow: 0 8px 48px #2563eb33;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.note-modal .close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.note-modal .close-btn:hover {
+  color: #1d4ed8;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

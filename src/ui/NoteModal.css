@@ -1,0 +1,38 @@
+.note-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.note-modal {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.note-modal-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.note-modal-hospital {
+  color: #888;
+  font-weight: normal;
+}
+
+.note-modal-date {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.note-modal-text {
+  white-space: pre-line;
+  font-size: 16px;
+} 
