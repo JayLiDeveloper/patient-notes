@@ -34,7 +34,9 @@ const PatientListPanel: React.FC<PatientListPanelProps> = ({
       <div className="app-title">Patient Notes</div>
       <h2>Patients</h2>
       {loading ? (
-        <div className="loading-panel"><span>Loading patients...</span></div>
+        <div className="loading-panel">
+          <span>Loading patients...</span>
+        </div>
       ) : (
         <>
           <input
@@ -120,7 +122,9 @@ const PatientListPanel: React.FC<PatientListPanelProps> = ({
                     <li
                       key={patient.id}
                       onClick={() => setSelectedPatientId(patient.id)}
-                      className={`patient-list-li${isSelected ? " selected" : ""}`}
+                      className={`patient-list-li${
+                        isSelected ? " selected" : ""
+                      }`}
                     >
                       <div>{patient.name}</div>
                       <div className="patient-list-li-info">
@@ -133,9 +137,23 @@ const PatientListPanel: React.FC<PatientListPanelProps> = ({
             )}
           </div>
           <div className="patient-list-pagination">
-            <button className="btn" onClick={() => filters.setPatientPage(filters.patientPage - 1)} disabled={filters.patientPage <= 1}>&lt;</button>
-            <span className="patient-list-pagination-info">Page {filters.patientPage} of {filters.totalPatientPages}</span>
-            <button className="btn" onClick={() => filters.setPatientPage(filters.patientPage + 1)} disabled={filters.patientPage >= filters.totalPatientPages}>&gt;</button>
+            <button
+              className="btn"
+              onClick={() => filters.setPatientPage(filters.patientPage - 1)}
+              disabled={filters.patientPage <= 1}
+            >
+              &lt;
+            </button>
+            <span className="patient-list-pagination-info">
+              Page {filters.patientPage} of {filters.totalPatientPages}
+            </span>
+            <button
+              className="btn"
+              onClick={() => filters.setPatientPage(filters.patientPage + 1)}
+              disabled={filters.patientPage >= filters.totalPatientPages}
+            >
+              &gt;
+            </button>
           </div>
         </>
       )}

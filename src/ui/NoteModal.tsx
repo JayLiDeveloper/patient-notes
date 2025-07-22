@@ -12,14 +12,8 @@ interface NoteModalProps {
 const NoteModal: React.FC<NoteModalProps> = ({ modalNote, setModalNote }) => {
   if (!modalNote) return null;
   return (
-    <div
-      className="note-modal-backdrop"
-      onClick={() => setModalNote(null)}
-    >
-      <div
-        className="note-modal"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <div className="note-modal-backdrop" onClick={() => setModalNote(null)}>
+      <div className="note-modal" onClick={(e) => e.stopPropagation()}>
         <button className="close-btn btn" onClick={() => setModalNote(null)}>
           &times;
         </button>
@@ -32,9 +26,7 @@ const NoteModal: React.FC<NoteModalProps> = ({ modalNote, setModalNote }) => {
         <div className="note-modal-date">
           {new Date(modalNote.creation_date).toLocaleString()}
         </div>
-        <div className="note-modal-text">
-          {modalNote.text}
-        </div>
+        <div className="note-modal-text">{modalNote.text}</div>
       </div>
     </div>
   );

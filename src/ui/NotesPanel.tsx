@@ -13,9 +13,7 @@ interface NotesPanelProps {
   selectedPatientId: number | null;
 }
 
-const NotesPanel: React.FC<NotesPanelProps> = ({
-  selectedPatientId,
-}) => {
+const NotesPanel: React.FC<NotesPanelProps> = ({ selectedPatientId }) => {
   const [notes, setNotes] = useState<Note[] | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -34,7 +32,9 @@ const NotesPanel: React.FC<NotesPanelProps> = ({
     <div className="panel notes-panel notes-panel-container">
       <h2>Notes</h2>
       {loading ? (
-        <div className="loading-panel"><span>Loading notes...</span></div>
+        <div className="loading-panel">
+          <span>Loading notes...</span>
+        </div>
       ) : (
         <>
           {/* Filters */}
@@ -110,9 +110,7 @@ const NotesPanel: React.FC<NotesPanelProps> = ({
                         @ {n.hospital_name}
                       </span>
                     </div>
-                    <div className="notes-panel-date">
-                      {n.creation_date}
-                    </div>
+                    <div className="notes-panel-date">{n.creation_date}</div>
                     <div className="notes-panel-text">
                       {n.text.slice(0, 80)}
                       {n.text.length > 80 ? "..." : ""}
