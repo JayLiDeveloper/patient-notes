@@ -1,5 +1,9 @@
 # Patient Notes
 
+## Check it out on Github pages
+
+https://jaylideveloper.github.io/patient-notes/
+
 ## Development Setup
 
 To run the project locally:
